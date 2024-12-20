@@ -89,7 +89,7 @@
 // document.body.innerText = user.address?.showFullAddress?.();
 
 // métodos de array
-const array = [1, 2, 3, 4, 5];
+// const array = [1, 2, 3, 4, 5];
 
 // for(const i of array){
 //   document.body.innerText += i;
@@ -101,8 +101,44 @@ const array = [1, 2, 3, 4, 5];
 //   novoArray.push(item * 2);
 // })
 
-const novoArray = array.map(item => {
-  return item * 2
+// const novoArray = array.map(item => {
+//   return item * 2
+// })
+
+// map, filter, every, some, find, findIndex, reduce
+
+// const novoArray = array
+//           .filter(item => item % 2 != 0) // filtrar itens não pares
+//           .map(item => item * 10) // multiplicar cada item filtrado por 10
+
+// verifica se todos itens do array satisfaz essa validação
+// const todosItensSaoNumeros = array.every(item => typeof item == 'number')
+
+// verificar se apenas um item é diferente de número no array
+// const peloMenosUmItemNaoEUmNumero = array.some(item => {
+//     return typeof item != 'number';
+// })
+
+// retorna o primeiro item que satisfaça essa condição
+// const par = array.find(item => item % 2 == 0);
+
+// retorna índice do primeiro item que satisfaça essa condição
+// const index = array.findIndex(item => item % 2 == 0);
+
+// const soma = array.reduce((acc, item) => {
+//     return acc + item
+// })
+
+// document.body.innerText = JSON.stringify(soma);
+
+// template literals
+// const name = null;
+// const message = `Bem-vindo, ${name ?? 'visitante'}`
+
+// document.body.innerText = message;
+
+const somaDoisNumeros = new Promise((resolve, reject) => {
+
 })
 
-document.body.innerText = JSON.stringify(novoArray);
+document.body.innerText = 
