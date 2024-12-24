@@ -137,8 +137,54 @@
 
 // document.body.innerText = message;
 
-const somaDoisNumeros = new Promise((resolve, reject) => {
+// promises
+// const somaDoisNumeros = (a, b) => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve(a + b);
+//         }, 2000)
+//     })
+// }
 
-})
+// somaDoisNumeros(1, 3)
+//     .then(soma => {
+//         document.body.innerText = soma
+//     })
+//     .catch(err => {
+//         console.log(err)
+//     })
 
-document.body.innerText = 
+// .then / .catch
+// fetch('https://api.github.com/users/icaro-nog')
+//     .then(response => {
+//         return response.json();
+//     })
+//     .then(body => {
+//         console.log(body)
+//     })
+//     .catch(err => {
+//         console.log(err)
+//     })
+//     .finally(() => {
+//         console.log('deu')
+//     })
+
+async function buscaDadosNoGithub() {
+
+    try{
+        const response = await fetch('https://api.github.com/users/icaro-nog');
+        const body = await response.json();
+    
+        return body.bio;
+    } catch(err) {
+        console.log(err)
+    } finally {
+        console.log('acabouuuu')
+    }
+
+}
+
+buscaDadosNoGithub().then(bio => {
+    console.log(bio)
+});
+
