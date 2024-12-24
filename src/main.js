@@ -1,3 +1,18 @@
+// Importações
+// import { soma, sub, PI } from "../lib/math";
+
+// console.log(soma(1, 5))
+// console.log(sub(1, 5))
+// console.log(PI)
+
+// import * as math from "../lib/math"
+
+// console.log(math.soma(1, 3))
+
+import { soma as sum } from "../lib/math";
+
+console.log(sum(1, 2))
+
 // const idade = 0;
 
 // // 0, '', [], false, undefined, null (valores falsy)
@@ -169,22 +184,22 @@
 //         console.log('deu')
 //     })
 
-async function buscaDadosNoGithub() {
+// async function buscaDadosNoGithub() {
 
-    try{
-        const response = await fetch('https://api.github.com/users/icaro-nog');
-        const body = await response.json();
+//     try{
+//         const response = await fetch('https://api.github.com/users/icaro-nog');
+//         const body = await response.json();
     
-        return body.bio;
-    } catch(err) {
-        console.log(err)
-    } finally {
-        console.log('acabouuuu')
-    }
+//         return body.bio;
+//     } catch(err) {
+//         console.log(err)
+//     } finally {
+//         console.log('acabouuuu')
+//     }
 
-}
+// }
 
-buscaDadosNoGithub().then(bio => {
-    console.log(bio)
-});
+// buscaDadosNoGithub().then(bio => {
+//     console.log(bio)
+// });
 
